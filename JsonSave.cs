@@ -64,7 +64,10 @@ public class JsonSave
 
 		// スロットがある場合は何もしない
 		if (HasSlot (slot))
+		{
 			Debug.LogWarning ("スロット" + slot + "はもうあるよ〜");
+			return;
+		}
 
 		Directory.CreateDirectory (GetSaveDirectory () + slot);
 	}
